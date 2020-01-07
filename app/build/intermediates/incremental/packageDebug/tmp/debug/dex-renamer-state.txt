@@ -1,0 +1,4 @@
+#Wed Jan 08 01:32:51 ICT 2020
+base.0=C\:\\Users\\SDKPEMKOT\\MyApplication\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

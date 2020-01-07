@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "742452155754",
+    "firebase_url": "https://sensusa-42fb3.firebaseio.com",
+    "project_id": "sensusa-42fb3",
+    "storage_bucket": "sensusa-42fb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742452155754:android:7781a9ddcfc527e0920113",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742452155754-bse1b200hchi8rakfbmrd6qm2b0lvql7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "2a443118962ca8dfdbdfe87998aa1159e984c4c7"
+          }
+        },
+        {
+          "client_id": "742452155754-lfpp0armro6oi9n6g846bmdcj7j6kph1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdj4pSMr1lO1aU5h7AOuNVP7y8Vo_ONJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742452155754-lfpp0armro6oi9n6g846bmdcj7j6kph1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

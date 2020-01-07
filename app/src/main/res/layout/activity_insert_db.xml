@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".insert_db">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aplikasi Sensus"
+        android:textAlignment="center"
+        android:textSize="60px"
+        android:textStyle="bold"
+        android:paddingBottom="40px"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Provinsi"
+        android:textSize="5pt"
+        android:paddingBottom="10px"/>
+
+    <EditText
+        android:id="@+id/et_prov"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kecamatan"
+        android:textSize="5pt"
+        android:paddingBottom="10px"/>
+
+    <EditText
+        android:id="@+id/et_kec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kelurahan"
+        android:textSize="5pt"
+        android:paddingBottom="10px"/>
+
+    <EditText
+        android:id="@+id/et_klrh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RT"
+        android:textSize="5pt"
+        android:paddingBottom="10px"/>
+
+    <EditText
+        android:id="@+id/et_rt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RW"
+        android:textSize="5pt"
+        android:paddingBottom="10px"/>
+
+    <EditText
+        android:id="@+id/et_rw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Kepala Keluarga"
+        android:textSize="5pt"
+        android:paddingBottom="10px"/>
+
+    <EditText
+        android:id="@+id/et_jk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Penduduk (RT)"
+        android:textSize="5pt"
+        android:paddingBottom="10px"/>
+
+    <EditText
+        android:id="@+id/et_jp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+
+</LinearLayout>
