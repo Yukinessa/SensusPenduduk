@@ -79,4 +79,14 @@ public class Sensus implements Serializable {
     public void setJumlah_Penduduk(String Jumlah_Penduduk){
         this.Jumlah_Penduduk = Jumlah_Penduduk;
     }
+    @Override
+    public String toString(){
+        return " " + Provinsi + "\n"
+                + " " +Kecamatan + "\n"
+                + " " +Kelurahan + "\n"
+                + " " +RT+ "\n"
+                + " " +RW+ "\n"
+                + " " +Jumlah_Kepala+ "\n"
+                + " " +Jumlah_Penduduk+ "\n";
+    }
 }

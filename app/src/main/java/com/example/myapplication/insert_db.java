@@ -27,6 +27,8 @@ public class insert_db extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_db);
 
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
         provinsi = (EditText) findViewById(R.id.et_prov);
         kecamatan = (EditText) findViewById(R.id.et_kec);
         kelurahan = (EditText) findViewById(R.id.et_klrh);
@@ -36,32 +38,56 @@ public class insert_db extends AppCompatActivity {
         jumlah_penduduk = (EditText) findViewById(R.id.et_jp);
         submit = (Button) findViewById(R.id.Submit);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-//        submit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (!isEmpty(provinsi.getText().toString()) && !isEmpty(kecamatan.getText().toString())
-//                        && !isEmpty(kelurahan.getText().toString()) && !isEmpty(rt.getText().toString()) && !isEmpty(rw.getText().toString())
-//                        && !isEmpty(jumlah_kepala.getText().toString()) && !isEmpty(jumlah_penduduk.getText().toString()))submitData
-//                        (new Sensus(provinsi.getText().toString(),kecamatan.getText().toString(),kelurahan.getText().toString(),rt.getText().toString(),
-//                                rw.getText().toString(),jumlah_kepala.getText().toString(),jumlah_penduduk.getText().toString()));
-//                else
-//                    Toast.makeText(getApplicationContext(), "Form tidak boleh kosong", Toast.LENGTH_SHORT).show();
-//
-//                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-//                imm.hideSoftInputFromWindow(
-//                        provinsi.getWindowToken(),0
-//                );
-//            }
-//        });
-    }
-    private boolean isEmpty(String s){
-        return TextUtils.isEmpty(s);
-    }
+        String Sprovinsi = provinsi.getText().toString();
+        String Skecamatan = kecamatan.getText().toString();
+        String Skelurahan = kelurahan.getText().toString();
+        String Srt= rt.getText().toString();
+        String Srw = rw.getText().toString();
+        String Sjumlah_kepala = jumlah_kepala.getText().toString();
+        String Sjumlah_penduduk = jumlah_penduduk.getText().toString();
 
+        if (Sprovinsi.equals("")){
+            provinsi.setError("Please fill this form");
+            provinsi.requestFocus();
+        }
+        else if (Skecamatan.equals("")){
+            kecamatan.setError("Please fill this form");
+            kecamatan.requestFocus();
+        }
+        else if (Skelurahan.equals("")){
+            kelurahan.setError("Please fill this form");
+            kelurahan.requestFocus();
+        }
+        else if (Srt.equals("")){
+            rt.setError("Please fill this form");
+            rt.requestFocus();
+        }
+        else if (Srw.equals("")){
+            rw.setError("Please fill this form");
+            rw.requestFocus();
+        }
+        else if (Sjumlah_kepala.equals("")){
+            jumlah_kepala.setError("Please fill this form");
+            jumlah_kepala.requestFocus();
+        }
+        else if (Sjumlah_penduduk.equals("")){
+            jumlah_penduduk.setError("Please fill this form");
+            jumlah_penduduk.requestFocus();
+        }
+        else {
+            submitData(new Sensus(
+                    Sprovinsi.toLowerCase(),
+                    Skecamatan.toLowerCase(),
+                    Skelurahan.toLowerCase(),
+                    Srt.toLowerCase(),
+                    Srw.toLowerCase(),
+                    Sjumlah_kepala.toLowerCase(),
+                    Sjumlah_penduduk.toLowerCase())
+            );
+        }
+    }
     private void submitData(Sensus sensus){
         mDatabase.child("sensus").push().setValue(sensus).addOnSuccessListener(this, new OnSuccessListener<Void>() {
-            @Override
             public void onSuccess(Void aVoid) {
                 provinsi.setText("");
                 kecamatan.setText("");
